@@ -1,0 +1,5 @@
+这里包含两个项目：
+RPC_Server：该项目是一个Web项目，用于Spring的远程调用服务端实现
+RPC_Client：该项目是一个普通的java项目，用于Spring的远程调用客户端实现
+
+这两个项目用于演示spring的远程调用

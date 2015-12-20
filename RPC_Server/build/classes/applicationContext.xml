@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans file:///D:\程序\java\Spring\spring-framework-4.2.1\spring-framework-4.2.1.RELEASE\schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/context file:///D:\程序\java\Spring\spring-framework-4.2.1\spring-framework-4.2.1.RELEASE\schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/aop file:///D:\程序\java\Spring\spring-framework-4.2.1\spring-framework-4.2.1.RELEASE\schema/aop/spring-aop-2.5.xsd
+		http://www.springframework.org/schema/tx file:///D:\程序\java\Spring\spring-framework-4.2.1\spring-framework-4.2.1.RELEASE\schema/tx/spring-tx-2.5.xsd">
+		<bean id="welcomeService" class="com.kdyzm.rpc.server.WelcomServiceImpl"></bean>
+		<bean class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter" name="/ws.service">
+			<property name="serviceInterface">
+				<value>com.kdyzm.rpc.server.WelcomeService</value>
+			</property>		
+			<property name="service" ref="welcomeService"></property>				
+		</bean>
+</beans>
